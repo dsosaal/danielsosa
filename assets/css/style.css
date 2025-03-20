@@ -255,7 +255,7 @@ body {
     border-bottom: 1px solid hsl(var(--hue) 45% 98% / .1);
     border-left: 1px solid hsl(var(--hue) 45% 98% / .1);
     border-radius: 50px;
-    display: none;
+     /* ======= Bottom: 50px ======= display: none; */
 }
 
 .bottom-nav .menu li a {
