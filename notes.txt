@@ -1,2 +1,3 @@
 URL: https://www.youtube.com/watch?v=0p-Rye_f0EA&list=LL
-Me quede en el minuto 1:40:53
+Me quede en el minuto 2:14:23 
+Termine la funcionalidad de js para navegar entre educacion, experiencia y la otra.
