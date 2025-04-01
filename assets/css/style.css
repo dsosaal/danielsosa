@@ -1136,6 +1136,14 @@ body {
     row-gap: 55px;
 }
 
+.portfolio-container .card-with-modal {
+    display: block;
+}
+
+.portfolio-container .card-with-modal.hidden {
+    display: none;
+}
+
 .portfolio-card {
     position: relative;
     background: var(--card-bg);
@@ -1165,6 +1173,186 @@ body {
     text-transform: uppercase;
 }
 
+.portfolio-card .card-info h4 {
+    color: var(--color-02);
+    font-size: var(--medium-font-size);
+    font-weight: var(--font-medium);
+    margin-top: 5px;
+}
+
+.portfolio-card .card-info i {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    margin: 15px;
+    transform: scale(0);
+    transition: .3s;
+}
+
+.portfolio-card:hover .card-info i {
+    transform: scale(1);
+}
+
+.portfolio-modal-backdrop {
+    z-index: var(--z-overlay);
+    position: fixed;
+    background: var(--modal-backdrop-bg);
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    display: none;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.portfolio-modal-backdrop.active {
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+
+.portfolio-modal-backdrop::-webkit-scrollbar {
+    background: hsl(var(--hue) 25% 20%);
+    width: 8px;
+    border-radius: 5px;
+}
+
+.portfolio-modal-backdrop::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+.portfolio-modal-backdrop::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-color);
+}
+
+.portfolio-modal {
+    position: relative;
+    background: var(--color-03);
+    max-width: 900px;
+    height: fit-content;
+    margin: 75px 25px;
+    padding: 50px 45px;
+    border-radius: 15px;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.portfolio-modal.active {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform .5s, opacity .5s;
+}
+
+.portfolio-modal .modal-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.portfolio-modal .modal-img {
+    width: 100%;
+}
+
+.portfolio-modal .modal-img img {
+    width: 100%;
+    border-radius: 10px;
+}
 
 
+.portfolio-modal .modal-content .modal-title {
+    color: var(--color-02);
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.portfolio-modal .modal-content .description {
+    color: var(--color-04);
+    font-size: var(--base-font-size);
+    font-weight: var(--font-regular);
+}
+
+/* ======= Testimonials ======= */
+.testimonials {
+    position: relative;
+    width: 100%;
+    margin-top: 12em;
+}
+
+.swiper {
+    width: 100%;
+    max-width: 1050px;
+    height: 275px;
+}
+
+.swiper-slide {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 45px;
+}
+
+.swiper-slide .client-img {
+    width: 185px;
+}
+
+.swiper-slide .client-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.swiper-slide .client-details {
+    max-width: 500px;
+    text-align: left;
+}
+
+.swiper-slide .client-details h3 {
+    color: var(--color-02);
+    font-size: x-large;
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 5px;
+}
+
+.swiper-slide .client-details span {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-regular);
+}
+
+.swiper-slide .client-details p {
+    color: var(--color-02);
+    font-size: var(--base-font-size);
+    font-weight: var(--font-regular);
+    margin-top: 15px;
+}
+
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+    display: none;
+}
+
+.swiper-button-next i,
+.swiper-button-prev i{
+    color: var(--primary-color);
+    font-size: 4.5rem;
+    transition: .3s ease;
+}
+
+.swiper-button-next i:hover,
+.swiper-button-prev i:hover{
+    color: var(--hover-color);
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active{
+    background-color: var(--primary-color);
+}
 }
