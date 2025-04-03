@@ -165,10 +165,18 @@ sueContactFormAlert = document.querySelector(".contact-form-alert");
 sueContactForm.addEventListener('submit', function(event) {
     event.preventDefault();
     // these IDs from the previous steps
-    emailjs.sendForm('service_ej2paxq', 'YOUR_TEMPLATE_ID', '#myForm')
+    emailjs.sendForm('service_ej2paxq', 'template_7kmdc8i', '#sue-contact-form')
         .then(() => {
-            console.log('SUCCESS!');
+            // console.log('SUCCESS!');
+            sueContactFormAlert.innerHTML = "<span>Your message sent successfully!</span> <i class='ri-checkbox-circle-fill'></i>";
+            sueContactForm.reset();
+
+            setTimeout(() => {
+                sueContactFormAlert.innerHTML = "";
+            }, 5000);
         }, (error) => {
-            console.log('FAILED...', error);
+            // console.log('FAILED...', error);
+            sueContactFormAlert.innerHTML = "<span>Message not sent</span> <i class='ri-error-warning-fill'></i>";
+            sueContactFormAlert.title = error;
         });
 });
