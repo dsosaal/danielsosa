@@ -150,3 +150,25 @@ var swiper = new Swiper(".sue-client-swiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+// Send/Receive emails from contact form = EmailJS
+(function() {
+    // https://dashboard.emailjs.com/admin/account
+    emailjs.init({
+        publicKey: "wKqF0S3ZjXTy88FbM",
+    });
+})();
+
+sueContactForm = document.getElementById("sue-contact-form");
+sueContactFormAlert = document.querySelector(".contact-form-alert");
+
+sueContactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    // these IDs from the previous steps
+    emailjs.sendForm('service_ej2paxq', 'YOUR_TEMPLATE_ID', '#myForm')
+        .then(() => {
+            console.log('SUCCESS!');
+        }, (error) => {
+            console.log('FAILED...', error);
+        });
+});
