@@ -313,7 +313,18 @@ body {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    /* bottom: 50px; */
+    bottom: -75px;
+    opacity: 0;
+    transition: .5s ease, .3s ease;
+    transition-property: bottom, opacity;
+}
+
+.bottom-nav.active{
     bottom: 50px;
+    opacity: 1;
+    transition: .5s ease, .3s ease;
+    transition-property: bottom, opacity;
 }
 
 .bottom-nav-inner {
@@ -404,6 +415,11 @@ body {
     opacity: 0;
 }
 
+.menu-hide-btn.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
 .bottom-nav .menu-hide-btn:hover {
     color: var(--white-color);
     background: var(--hover-color);
@@ -430,9 +446,18 @@ body {
     opacity: 0;
     border-radius: 5px;
     cursor: pointer;
+    transition: .5s ease, .3s ease;
+    transition-property: bottom, opacity;
     overflow: hidden;
     animation: wiggle 2s linear infinite;
     animation-delay: 1s;
+}
+
+.menu-show-btn.active{
+    bottom: 50px;
+    opacity: 1;
+    transition: .5s ease, .3s ease;
+    transition-property: bottom, opacity;
 }
 
 @keyframes wiggle {
