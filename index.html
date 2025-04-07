@@ -17,6 +17,20 @@
 </head>
 <body>
 
+    <!-- Customized cursor -->
+    <!-- <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-circle"></div>
+    </div> -->
+
+    <!-- To top button with scroll indicator bar -->
+    <div class="to-top-btn">
+        <a href="#home"><span>To top</span></a>
+        <div class="scroll-indicator-bar">
+
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="sue-header">
         <div class="sue-container">
@@ -1000,6 +1014,70 @@
         menuHideBtn.classList.add("active");
         menuShowBtn.classList.toggle("active");
     });
+</script>
+
+<script>
+    window.addEventListener("scroll", () => {
+        const toTopBtn = document.querySelector(".to-top-btn");
+
+        toTopBtn.classList.toggle("active", window.scrollY > 0);
+
+        // Scroll indicator bar
+        const scrollIndicatorBar = document.querySelector(".scroll-indicator-bar");
+
+        const pageScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+        const scrollValue = (pageScroll / height) * 100;
+
+        scrollIndicatorBar.style.height = scrollValue + "%";
+    });
+</script>
+
+
+<!-- Cursor effects -->
+
+<script>
+    const cursor = document.querySelector(".cursor");
+    const cursorDot = cursor.querySelector(".cursor-dot");
+    const cursorCircle = cursor.querySelector(".cursor-circle");
+
+    document.addEventListener("mousemove", (e) => {
+        let x = e.clientX;
+        let y = e.clientY;
+
+        cursorDot.style.top = y + "px";
+        cursorDot.style.left = x + "px";
+        cursorCircle.style.top = y + "px";
+        cursorCircle.style.left = x + "px";
+    });
+</script>
+
+<!-- Cursor effects on hover -->
+<script>
+    const themeBtn = document.querySelector(".theme-btn");
+
+themeBtn.addEventListener("click", () => {
+    // Change theme icon and theme on click theme button.
+    themeBtn.classList.toggle("active-sun-icon");
+    document.body.classList.toggle("light-theme");
+
+    // Save theme icon and theme on click theme button
+    const getCurrentIcon = () => themeBtn.classList.contains("active-sun-icon") ? "sun" : "moon";
+    const getCurrentTheme = () => document.body.classList.contains("light-theme") ? "light" : "dark";
+
+    localStorage.setItem("sue-saved-icon", getCurrentIcon());
+    localStorage.setItem("sue-saved-theme", getCurrentTheme());
+});
+
+//Get saved icon and saved theme on document loaded
+const savedIcon = localStorage.getItem("sue-saved-icon");
+const savedTheme = localStorage.getItem("sue-saved-theme");
+
+document.addEventListener("DOMContentLoaded", () =>{
+    themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("active-sun-icon");
+    document.body.classList[savedTheme === "light" ? "add" : "remove"]("light-theme");
+});
 </script>
 
 </html>
