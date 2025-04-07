@@ -212,3 +212,7 @@ sueContactForm.addEventListener('submit', function(event) {
 
 
 // JavaScript to show bottom navigation menu on home page 
+
+// Website dark/light theme
+// change theme and save current theme on click the theme button
+
