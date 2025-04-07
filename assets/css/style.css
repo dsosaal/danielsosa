@@ -1017,7 +1017,7 @@ body {
 
 .skill-container {
     max-width: 100%;
-    display: flex;
+    display: grid;
     place-items: center;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 50px;
@@ -1055,7 +1055,7 @@ body {
 
 .skill-categories {
     display: grid;
-    place-items: center;
+    place-items: start;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 65px;
     row-gap: 35px;
@@ -1782,6 +1782,228 @@ body {
     transition: .3s;
 }
 
+/* ======= Media Queries ======= */
+/* ======= Max Widht 1600px ======= */
+@media screen and (max-width:1600px){
+    .cursor {
+        display: none;
+    }
+
+    .sue-container {
+        max-width: 1075px;
+    }
+
+    .avatar-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* ======= Max Widht 1600px ======= */
+@media screen and (max-width:1200px){
+
+    .sue-container {
+        max-width: 100%;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .section-content {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 50px;
+    }
+
+    .about-img {
+        width: 300px;
+    }
+
+    .about-details {
+        width: unset;
+    }
+
+    .about-info {
+        display: grid;
+        place-items: center;
+    }
+
+    .about-description {
+        max-width: 700px;
+    }
+
+    .about-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .skill-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ======= Max Widht 992px ======= */
+@media screen and (max-width:992px){
+    .avatar-container {
+        flex-direction: column-reverse;
+        row-gap: 10px;
+    }
+
+    .avatar-container .hire-btn-01 {
+        display: block;
+    }
+
+    .avatar-container .hire-btn-02 {
+        display: none;
+    }
+
+    .avatar-img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .avatar-info .text-content {
+        align-items: center;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .swiper {
+        max-width: 700px;
+        height: 450px;
+    }
+
+    .swiper-slide {
+        flex-direction: column;
+    }
+
+    .swiper-slide .client-img {
+        margin-bottom: 35px;
+    }
+
+    .swiper-slide .client-details {
+        text-align: center;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        row-gap: 75px;
+    }
+
+    .contact-info {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contact-social-links {
+        justify-content: center;
+    }
+
+}
+
+
+/* ======= Max Widht 768px ======= */
+@media screen and (max-width:768px){
+    :root{
+        /* ======= Font sizes ======= */
+        --h1-font-size: 2.3rem;
+        --h2-font-size: 1.97rem;
+        --h3-font-size: 1.75rem;
+        --h4-font-size: 1.3rem;
+        --h5-font-size: 1.05rem;
+
+        --xlarge-font-size: 1.28rem;
+        --large-font-size: 1.13rem;
+        --medium-font-size: 1.06rem;
+        --base-font-size: 1rem;
+        --small-font-size: .93rem;
+        --tiny-font-size: .88rem;
+    }
+
+    .sue-container{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .sue-logo a {
+        font-size: 2.35rem;
+    }
+
+    .lets-talk-btn{
+        display: none;
+    }
+
+    .lets-talk-icon{
+        font-size: 1.6rem;
+        display: block;
+    }
+
+    .theme-btn i{
+        font-size: 1.6rem;
+    }
+
+    .bottom-nav {
+        bottom: -30px;
+    }
+
+    .bottom-nav.active{
+        bottom: 30px;
+    }
+
+    .bottom-nav .menu li a i{
+        font-size: 1.25rem;
+    }
+
+    .home-social .social-line{
+        margin-top: 32px;
+        margin-bottom: 20px;
+    }
+
+    .resume-items .item .info{
+        width: 185px;
+        column-gap: 15px;
+    }
+
+    .resume-items .item-left .info{
+        right: 25px;
+    }
+
+    .resume-items .item-right .info{
+        left: 75px;
+    }
+
+    .resume-items .item .info i{
+        display: none;
+    }
+
+    .skill-card{
+        padding: 50px 0;
+    }
+
+    .skill i{
+        font-size: 1.25rem;
+    }
+
+    .service-container{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+    }
+
+}
 
 
 
