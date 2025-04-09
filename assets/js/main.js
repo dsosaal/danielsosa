@@ -29,183 +29,184 @@ var resumeTabNav = function(resumeTabClick){
 resumePortfolioTabBtns.forEach((resumePortfolioTabBtn, i) => {
     resumePortfolioTabBtn.addEventListener("click", () => {
         resumeTabNav(i);
-    })
+    });
 });
 
 /* =====================================================
     Service modal open/close function
 ===================================================== */
-// const serviceCardWithmodals = document.querySelectorAll(".service-container .card-with-modal");
+const serviceCardWithmodals = document.querySelectorAll(".service-container .card-with-modal");
 
-// serviceCardWithmodals.forEach((serviceCardWithmodal) => {
-//     const serviceCard = serviceCardWithmodal.querySelector(".service-card");
-//     const serviceBackDrop = serviceCardWithmodal.querySelector(".service-modal-backdrop");
-//     const modalCloseBtn = serviceCardWithmodal.querySelector(".modal-close-btn");
-//     const serviceModal = serviceCardWithmodal.querySelector(".service-modal");
+serviceCardWithmodals.forEach((serviceCardWithmodal) => {
+    const serviceCard = serviceCardWithmodal.querySelector(".service-card");
+    const serviceBackDrop = serviceCardWithmodal.querySelector(".service-modal-backdrop");
+    const modalCloseBtn = serviceCardWithmodal.querySelector(".modal-close-btn");
+    const serviceModal = serviceCardWithmodal.querySelector(".service-modal");
 
-//     serviceCard.addEventListener("click", () => {
-//         serviceBackDrop.style.display = "flex";
+    serviceCard.addEventListener("click", () => {
+        serviceBackDrop.style.display = "flex";
 
-//         setTimeout(() => {
-//             serviceBackDrop.classList.add("active");
-//         }, 100);
+        setTimeout(() => {
+            serviceBackDrop.classList.add("active");
+        }, 100);
 
-//         setTimeout(() => {
-//             serviceModal.classList.add("active");
-//         }, 300);
-//     });
+        setTimeout(() => {
+            serviceModal.classList.add("active");
+        }, 300);
+    });
 
-//     modalCloseBtn.addEventListener("click", () => {
-//         setTimeout(() => {
-//             serviceBackDrop.style.display = "none";
-//         }, 500);
+    modalCloseBtn.addEventListener("click", () => {
+        setTimeout(() => {
+            serviceBackDrop.style.display = "none";
+        }, 500);
         
-//         setTimeout(() => {
-//             serviceBackDrop.classList.remove("active");
-//             serviceModal.classList.remove("active");
-//         }, 100);
+        setTimeout(() => {
+            serviceBackDrop.classList.remove("active");
+            serviceModal.classList.remove("active");
+        }, 100);
         
-//     });
-// });
+    });
+});
 
 /* =====================================================
     Portfolio modals, tabs and cards
 ===================================================== */
-
 // Filter portfolio cards according to portfolio tabs
-// document.addEventListener("DOMContentLoaded", () => {
-//     const portfolioTabs = document.querySelector(".portfolio-tabs");
-//     const portfolioTabBtns = portfolioTabs.querySelectorAll(".tab-btn");
-//     const cardsWithModals = document.querySelectorAll(".portfolio-container .card-with-modal");
+document.addEventListener("DOMContentLoaded", () => {
+    const portfolioTabs = document.querySelector(".portfolio-tabs");
+    const portfolioTabBtns = portfolioTabs.querySelectorAll(".tab-btn");
+    const cardsWithModals = document.querySelectorAll(".portfolio-container .card-with-modal");
 
-//     portfolioTabBtns.forEach((tabBtn) => {
-//         tabBtn.addEventListener("click", () => {
-//             const filter = tabBtn.getAttribute("data-filter");
+    portfolioTabBtns.forEach((tabBtn) => {
+        tabBtn.addEventListener("click", () => {
+            const filter = tabBtn.getAttribute("data-filter");
 
-//             cardsWithModals.forEach((cardWithModal) => {
-//                 if(filter === "all" || cardWithModal.classList.contains(filter)){
-//                     cardWithModal.classList.remove("hidden");
+            cardsWithModals.forEach((cardWithModal) => {
+                if(filter === "all" || cardWithModal.classList.contains(filter)){
+                    cardWithModal.classList.remove("hidden");
 
-//                     setTimeout(() => {
-//                         cardWithModal.style.opacity = "1";
-//                         cardWithModal.style.transition = ".5s ease";
-//                     }, 1);
-//                 }
-//                 else{
-//                     cardWithModal.classList.add("hidden");
+                    setTimeout(() => {
+                        cardWithModal.style.opacity = "1";
+                        cardWithModal.style.transition = ".5s ease";
+                    }, 1);
+                }
+                else{
+                    cardWithModal.classList.add("hidden");
 
-//                     setTimeout(() => {
-//                         cardWithModal.style.opacity = "0";
-//                         cardWithModal.style.transition = ".5s ease";
-//                     }, 1);
-//                 }
-//             });
-//             // Add active class to the clicked tab button.
-//             portfolioTabBtns.forEach((tabBtn) => tabBtn.classList.remove("active"));
-//             tabBtn.classList.add("active");
-//         });
-//     });
-// });
-
+                    setTimeout(() => {
+                        cardWithModal.style.opacity = "0";
+                        cardWithModal.style.transition = ".5s ease";
+                    }, 1);
+                }
+            });
+            // Add active class to the clicked tab button.
+            portfolioTabBtns.forEach((tabBtn) => tabBtn.classList.remove("active"));
+            tabBtn.classList.add("active");
+        });
+    });
+});
 
 // Open/Close Portfolio Modals
-// const portfolioCardsWithModals = document.querySelectorAll(".portfolio-container .card-with-modal");
+const portfolioCardsWithModals = document.querySelectorAll(".portfolio-container .card-with-modal");
 
-// portfolioCardsWithModals.forEach((portfolioCardWithModal) => {
-//     const portfolioCard = portfolioCardWithModal.querySelector(".portfolio-card");
-//     const portfolioBackdrop = portfolioCardWithModal.querySelector(".portfolio-modal-backdrop");
-//     const portfolioModal = portfolioCardWithModal.querySelector(".portfolio-modal");
-//     const modalCloseBtn = portfolioCardWithModal.querySelector(".modal-close-btn");
+portfolioCardsWithModals.forEach((portfolioCardWithModal) => {
+    const portfolioCard = portfolioCardWithModal.querySelector(".portfolio-card");
+    const portfolioBackdrop = portfolioCardWithModal.querySelector(".portfolio-modal-backdrop");
+    const portfolioModal = portfolioCardWithModal.querySelector(".portfolio-modal");
+    const modalCloseBtn = portfolioCardWithModal.querySelector(".modal-close-btn");
 
-//     portfolioCard.addEventListener("click", () => {
-//         portfolioBackdrop.style.display = "flex";
+    portfolioCard.addEventListener("click", () => {
+        portfolioBackdrop.style.display = "flex";
 
-//         setTimeout(() => {
-//             portfolioBackdrop.classList.add("active");
-//         }, 300);
+        setTimeout(() => {
+            portfolioBackdrop.classList.add("active");
+        }, 300);
         
-//         setTimeout(() => {
-//             portfolioModal.classList.add("active");
-//         }, 300);
-//     });
+        setTimeout(() => {
+            portfolioModal.classList.add("active");
+        }, 300);
+    });
 
-//     modalCloseBtn.addEventListener("click", () => {
-//         setTimeout(() => {
-//             portfolioBackdrop.style.display = "none";
-//         }, 500);
+    modalCloseBtn.addEventListener("click", () => {
+        setTimeout(() => {
+            portfolioBackdrop.style.display = "none";
+        }, 500);
         
-//         setTimeout(() => {
-//             portfolioBackdrop.classList.remove("active");
-//             portfolioModal.classList.remove("active");
-//         }, 100);
-//     });
+        setTimeout(() => {
+            portfolioBackdrop.classList.remove("active");
+            portfolioModal.classList.remove("active");
+        }, 100);
+    });
 
-// });
+});
 
 
 /* =====================================================
     Testimonial Swiper
 ===================================================== */
-// var swiper = new Swiper(".sue-client-swiper", {
-//     slidesPerView: 1,
-//     spaceBetween: 30,
-//     loop: true,
-//     pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//     },
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-// });
+var swiper = new Swiper(".sue-client-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 
 /* =====================================================
     Send/Receive emails from contact form - EmailJS
 ===================================================== */
-// (function() {
-//     // https://dashboard.emailjs.com/admin/account
-//     emailjs.init({
-//         publicKey: "wKqF0S3ZjXTy88FbM",
-//     });
-// })();
+document.addEventListener("DOMContentLoaded", () => {
+    (function() {
+        emailjs.init({
+            publicKey: "wKqF0S3ZjXTy88FbM",
+        });
+    })();
 
-// sueContactForm = document.getElementById("sue-contact-form");
-// sueContactFormAlert = document.querySelector(".contact-form-alert");
+    const sueContactForm = document.getElementById("sue-contact-form");
+    const sueContactFormAlert = document.querySelector(".contact-form-alert");
 
-// sueContactForm.addEventListener('submit', function(event) {
-//     event.preventDefault();
-//     // these IDs from the previous steps
-//     emailjs.sendForm('service_ej2paxq', 'template_7kmdc8i', '#sue-contact-form')
-//         .then(() => {
-//             // console.log('SUCCESS!');
-//             sueContactFormAlert.innerHTML = "<span>Your message sent successfully!</span> <i class='ri-checkbox-circle-fill'></i>";
-//             sueContactForm.reset();
+    if (sueContactForm && sueContactFormAlert) {
+        sueContactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_ej2paxq', 'template_7kmdc8i', '#sue-contact-form')
+                .then(() => {
+                    sueContactFormAlert.innerHTML = "<span>Your message sent successfully!</span> <i class='ri-checkbox-circle-fill'></i>";
+                    sueContactForm.reset();
 
-//             setTimeout(() => {
-//                 sueContactFormAlert.innerHTML = "";
-//             }, 5000);
-//         }, (error) => {
-//             // console.log('FAILED...', error);
-//             sueContactFormAlert.innerHTML = "<span>Message not sent</span> <i class='ri-error-warning-fill'></i>";
-//             sueContactFormAlert.title = error;
-//         });
-// });
+                    setTimeout(() => {
+                        sueContactFormAlert.innerHTML = "";
+                    }, 5000);
+                })
+                .catch((error) => {
+                    console.error('Error al enviar el formulario:', error);
+                    sueContactFormAlert.innerHTML = "<span>Message not sent</span> <i class='ri-error-warning-fill'></i>";
+                    sueContactFormAlert.title = error;
+                });
+        });
+    }
+});
 
 
 /* =====================================================
     Shrink the height of the header on scroll
 ===================================================== */
-window.addEventListener("scroll", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const sueHeader = document.querySelector(".sue-header");
 
+    window.addEventListener("scroll", () => {
     sueHeader.classList.toggle("shrink", window.scrollY > 0);
+    });
 });
 
 /* =====================================================
     Bottom navigation menu
 ===================================================== */
-
 // Each Botton navigation menu items active on page scroll.
 window.addEventListener("scroll", () =>{
     const navMenuSections = document.querySelectorAll(".nav-menu-section");
@@ -224,27 +225,132 @@ window.addEventListener("scroll", () =>{
     });
 });
 
-
 // Javascript to show bottom navigation menu on home(page load).
+window.addEventListener("DOMContentLoaded", () => {
+    const bottomNav = document.querySelector(".bottom-nav");
+
+    bottomNav.classList.toggle("active", window.scrollY < 10);
+});
 
 // Javascript to show/hide bottom navigation menu on home(scroll).
+const bottomNav = document.querySelector(".bottom-nav");
+    const menuHideBtn = document.querySelector(".menu-hide-btn");
+    const menuShowBtn = document.querySelector(".menu-show-btn");
+    var navTimeOut;
+
+    window.addEventListener("scroll", () => {
+        bottomNav.classList.add("active");
+        menuShowBtn.classList.remove("active");
+
+        if(window.scrollY < 10){
+            menuHideBtn.classList.remove("active");
+
+            function scrollStopped(){
+                bottomNav.classList.add("active");
+            }
+
+            clearTimeout(navTimeOut);
+            navTimeOut = setTimeout(scrollStopped,2500);
+        }
+
+        if(window.scrollY > 10){
+            menuHideBtn.classList.add("active");
+
+            function scrollStopped(){
+                bottomNav.classList.remove("active");
+                menuShowBtn.classList.add("active");
+            }
+
+            clearTimeout(navTimeOut);
+            navTimeOut = setTimeout(scrollStopped,2500);
+        }
+    });
 
 // Hide bottom navigation menu on click menu-hide-btn.
+menuHideBtn.addEventListener("click", () => {
+    bottomNav.classList.toggle("active");
+    menuHideBtn.classList.toggle("active");
+    menuShowBtn.classList.toggle("active");
+});
 
 // Show bottom navigation menu on click menu-show-btn. 
+menuShowBtn.addEventListener("click", () => {
+    bottomNav.classList.toggle("active");
+    menuHideBtn.classList.add("active");
+    menuShowBtn.classList.toggle("active");
+});
+
+/* =====================================================
+    To-top-button with scroll indicator bar
+===================================================== */
+window.addEventListener("scroll", () => {
+    const toTopBtn = document.querySelector(".to-top-btn");
+
+    toTopBtn.classList.toggle("active", window.scrollY > 0);
+
+    // Scroll indicator bar
+    const scrollIndicatorBar = document.querySelector(".scroll-indicator-bar");
+
+    const pageScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    const scrollValue = (pageScroll / height) * 100;
+
+    scrollIndicatorBar.style.height = scrollValue + "%";
+});
+
+/* =====================================================
+    Customized cursor on mousemove
+===================================================== */
+
 
 /* =====================================================
     Website dark/light theme
 ===================================================== */
-// Change theme and save current theme on click the theme button.
+const themeBtn = document.querySelector(".theme-btn");
+
+themeBtn.addEventListener("click", () => {
+    // Change theme and save current theme on click the theme button.
+    themeBtn.classList.toggle("active-sun-icon");
+    document.body.classList.toggle("light-theme");
+
+    // Save theme icon and theme on click theme button
+    const getCurrentIcon = () => themeBtn.classList.contains("active-sun-icon") ? "sun" : "moon";
+    const getCurrentTheme = () => document.body.classList.contains("light-theme") ? "light" : "dark";
+
+    localStorage.setItem("sue-saved-icon", getCurrentIcon());
+    localStorage.setItem("sue-saved-theme", getCurrentTheme());
+});
 
 // Get saved theme icon and theme on document loaded.
+const savedIcon = localStorage.getItem("sue-saved-icon");
+const savedTheme = localStorage.getItem("sue-saved-theme");
+
+document.addEventListener("DOMContentLoaded", () =>{
+    themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("active-sun-icon");
+    document.body.classList[savedTheme === "light" ? "add" : "remove"]("light-theme");
+});
 
 /* =====================================================
     ScrollReveal JS animations
 ===================================================== */
 // Common reveal options to create reveal animations.
+ScrollReveal({
+    reset: true,
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+});
 
 // Target elements and specify options to create reveal animations.
-
+ScrollReveal().reveal('.avatar-img', {delay: 100, origin: 'top'});
+ScrollReveal().reveal('.avatar-info, .section-title', {delay: 300, origin: 'top'});
+ScrollReveal().reveal('.home-social, home-scroll-btn, .copy-right', {delay: 600, origin: 'bottom'});
+ScrollReveal().reveal('.about-img', {delay: 700, origin: 'top'});
+ScrollReveal().reveal('.about-info, .sue-footer .sue-logo', {delay: 300, origin: 'bottom'});
+ScrollReveal().reveal('.pro-card, .about-buttons .sue-main-btn, .resume-tabs .tab-btn', {delay: 500, origin: 'right', interval: 200});
+ScrollReveal().reveal('#resume, .section-content', {delay: 700, origin: 'bottom'});
+ScrollReveal().reveal('.service-card, .portfolio-card, .contact-item, .contact-social-links li, .footer-menu .menu-item', {delay: 300, origin: 'bottom', interval: 300});
+ScrollReveal().reveal('.sue-client-swiper', {delay: 700, origin: 'right'});
+ScrollReveal().reveal('.contact-info h3', {delay: 100, origin: 'bottom', interval: 300});
 

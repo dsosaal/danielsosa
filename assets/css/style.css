@@ -86,7 +86,7 @@
     --color-02: hsl(var(--hue) 26% 12%); /* white to dark */
     --color-03: hsl(var(--hue) 45% 98%); /* dark to white */
     --color-04: hsl(var(--hue) 9% 46%); /* light-gray to dark-gray */
-    --color-05: hsl(var(--hue) var(--sat-) var(--light)); /* dark to primary */
+    --color-05: hsl(var(--hue) var(--sat) var(--light)); /* dark to primary */
 
     --body-color: hsl(var(--hue) 45% 98%); /* dark to white */
 
@@ -99,6 +99,7 @@
     --scrollbar-color: hsl(var(--hue) 9% 60%);
     --scrollbar-thumb: hsl(var(--hue) 9% 25%);
     --scrollbar-thumb-hover: hsl(var(--hue) 9% 17%);
+}
 
     .bottom-nav .menu-hide-btn{
         box-shadow: 0 2px 4px hsl(0, 0%, 1%, .25);
@@ -320,7 +321,7 @@ body {
 /* ========== Buttons ========== */
 .sue-main-btn {
     width: fit-content;
-    padding: 14px;
+    padding: 14px 30px;
     border-radius: 35px;
     cursor: pointer;
     transition: .3s;
@@ -452,7 +453,6 @@ body {
     align-items: center;
     column-gap: 25px;
 }
-
 
 /* =========================================
     Bottom navigation menu
@@ -2309,7 +2309,7 @@ body {
         display: none;
     }
 
-    
+
 }
 
 }
