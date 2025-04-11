@@ -932,7 +932,7 @@ body {
     /* display: flex; */
     width: 100%;
     justify-content: center;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     display: none;
     opacity: 0;
     transition: opacity .3s ease;
@@ -946,7 +946,7 @@ body {
 .education .resume-line {
     background: var(--primary-color);
     width: 2px;
-    height: 380px;
+    height: 250px;
 }
 
 .resume-items {
@@ -1006,7 +1006,7 @@ body {
 .resume-items .item .info p {
     color: var(--color-04);
     font-size: var(--small-font-size);
-    white-space: nowrap;
+    white-space: break-spaces;
     margin-bottom: 18px;
     align-items: center;
 }
@@ -1023,7 +1023,7 @@ body {
 .experience .resume-line {
     background: var(--primary-color);
     width: 2px;
-    height: 250px;
+    height: 500px;
 }
 
 .education, .experience {
