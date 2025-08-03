@@ -881,7 +881,7 @@ body {
 }
 
 /* =========================================
-    My Resume
+    Portfolio
 ========================================= */
 .resume-tabs {
     display: flex;
@@ -946,7 +946,7 @@ body {
 .education .resume-line {
     background: var(--primary-color);
     width: 2px;
-    height: 250px;
+    height: 380px;
 }
 
 .resume-items {
