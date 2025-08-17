@@ -804,7 +804,7 @@ body {
 ========================================= */
 .about-img {
     position: relative;
-    width: 35%;
+    width: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -818,7 +818,7 @@ body {
 }
 
 .about-details {
-    width: 65%;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
