@@ -2309,6 +2309,18 @@ body {
         display: none;
     }
 
+    #about .about-img:empty {
+  display: none; /* si no hay imagen, no ocupa espacio */
+    }
+    
+    #about .about-details {
+      width: 100%;          /* que use todo el ancho */
+      max-width: 720px;     /* para legibilidad */
+      margin: 0 auto;       /* centrado */
+      text-align: center;   /* centra el texto */
+    }
+
+
 
 }
 
