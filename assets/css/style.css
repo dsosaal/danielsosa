@@ -2320,6 +2320,10 @@ body {
       text-align: center;   /* centra el texto */
     }
 
+    .theme-btn {
+    display: none;
+}
+
 
 
 }
