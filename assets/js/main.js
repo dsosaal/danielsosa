@@ -159,6 +159,20 @@ var swiper = new Swiper(".sue-client-swiper", {
 });
 
 /* =====================================================
+    About Process Swiper (nuevo)
+===================================================== */
+var aboutSwiper = new Swiper(".about-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    speed: 800,
+});
+
+/* =====================================================
     Send/Receive emails from contact form - EmailJS
 ===================================================== */
 document.addEventListener("DOMContentLoaded", () => {
