@@ -1707,13 +1707,13 @@ body {
 
 #resume .about-details {
     max-width: 700px;
-    margin: 60px auto 0; /* 👈 centra horizontal + separa arriba */
+    margin: 60px auto 0; 
     text-align: center;
 }
 
 /* texto alineado bonito */
 #resume .about-description {
-    text-align: center;   /* 👈 mantiene lectura profesional */
+    text-align: center; 
 }
 
 /* botón centrado */
